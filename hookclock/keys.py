@@ -45,9 +45,9 @@ def load_keystore(path: str | Path) -> Keystore:
             raise KeystoreError("kid must be a non-empty string")
         if not isinstance(secret, str) or secret == "":
             raise KeystoreError(f"secret for {kid} must be a non-empty string")
-        if "" in kid or "/" in kid or "\" in kid or ".." in kid or "://" in kid:
+        if chr(0) in kid or "/" in kid or "\\" in kid or ".." in kid or "://" in kid:
             raise KeystoreError(f"blocked kid in keystore: {kid}")
         keys[kid] = Key(kid=kid, secret=secret.encode("utf-8"), revoked=bool(item.get("revoked", False)))
     if not keys:
         raise KeystoreError("keystore has no keys")
-    return Keystore(keys=keys, raw=data)
+        if chr(0) in kid or '/' in kid or '\\' in kid or '..' in kid or '://' in kid:
