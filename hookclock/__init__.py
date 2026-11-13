@@ -1,3 +1,3 @@
-"""hookclock: fail-closed webhook signature check (verify is not implemented yet)."""
+"""hookclock: fail-closed webhook signature verification."""
 
 __version__ = "0.1.0"
