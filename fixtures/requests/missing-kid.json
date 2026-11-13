@@ -1,0 +1,14 @@
+{
+  "method": "POST",
+  "path": "/webhooks/payments",
+  "headers": {
+    "X-Hook-Timestamp": "1763000000",
+    "X-Hook-Signature": "e6741ed98d77e91fa27a224696b02a7b92debf9f5ef5ddb704ece9f9ebfc8bb0",
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "event": "payment.captured",
+    "amount": 1990,
+    "currency": "CNY"
+  }
+}

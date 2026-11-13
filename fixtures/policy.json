@@ -1,0 +1,7 @@
+{
+  "max_skew_seconds": 300,
+  "require_kid": true,
+  "allowed_methods": [
+    "POST"
+  ]
+}
